@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.pdfconverter.app.ui.MainFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_main">
+        <action android:id="@+id/action_to_pdfToImage"
+            app:destination="@id/pdfToImageFragment" />
+        <action android:id="@+id/action_to_imageToPdf"
+            app:destination="@id/imageToPdfFragment" />
+        <action android:id="@+id/action_to_pdfToText"
+            app:destination="@id/pdfToTextFragment" />
+        <action android:id="@+id/action_to_textToPdf"
+            app:destination="@id/textToPdfFragment" />
+        <action android:id="@+id/action_to_mergePdf"
+            app:destination="@id/mergePdfFragment" />
+        <action android:id="@+id/action_to_splitPdf"
+            app:destination="@id/splitPdfFragment" />
+        <action android:id="@+id/action_to_compressPdf"
+            app:destination="@id/compressPdfFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/pdfToImageFragment"
+        android:name="com.pdfconverter.app.ui.PdfToImageFragment"
+        android:label="@string/pdf_to_image"
+        tools:layout="@layout/fragment_pdf_to_image" />
+
+    <fragment
+        android:id="@+id/imageToPdfFragment"
+        android:name="com.pdfconverter.app.ui.ImageToPdfFragment"
+        android:label="@string/image_to_pdf"
+        tools:layout="@layout/fragment_image_to_pdf" />
+
+    <fragment
+        android:id="@+id/pdfToTextFragment"
+        android:name="com.pdfconverter.app.ui.PdfToTextFragment"
+        android:label="@string/pdf_to_text"
+        tools:layout="@layout/fragment_pdf_to_text" />
+
+    <fragment
+        android:id="@+id/textToPdfFragment"
+        android:name="com.pdfconverter.app.ui.TextToPdfFragment"
+        android:label="@string/text_to_pdf"
+        tools:layout="@layout/fragment_text_to_pdf" />
+
+    <fragment
+        android:id="@+id/mergePdfFragment"
+        android:name="com.pdfconverter.app.ui.MergePdfFragment"
+        android:label="@string/merge_pdf"
+        tools:layout="@layout/fragment_merge_pdf" />
+
+    <fragment
+        android:id="@+id/splitPdfFragment"
+        android:name="com.pdfconverter.app.ui.SplitPdfFragment"
+        android:label="@string/split_pdf"
+        tools:layout="@layout/fragment_split_pdf" />
+
+    <fragment
+        android:id="@+id/compressPdfFragment"
+        android:name="com.pdfconverter.app.ui.CompressPdfFragment"
+        android:label="@string/compress_pdf"
+        tools:layout="@layout/fragment_compress_pdf" />
+</navigation>
